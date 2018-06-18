@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <style>
+      body {
+        background: orange;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      h1 {
+        text-align: center;
+      }
+      p {
+        text-align: left;
+      }
+      .orgText {
+        height: 2em;
+        width: 60%;
+      }
+      .key {
+        height: 2em;
+        width: 20%;
+      }
+      .encode {
+        height: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main">
+      <h1>Caesar Ciper</h1>
+        <form class="UserInput">
+          <input class="orgText" type="text" name="org_text" placeholder="Enter text"/>
+          <input class="key" type="number" name="key" placeholder="Enter key"/>
+          <input class="encode" type="submit" value="Encode"/>
+        </form>
+        <p>
+        <%=
+        unless original_text.nil? 
+          "Original text: #{original_text}" 
+        end
+        %>
+        </p>
+        <p>
+        <%=
+        unless encoded.nil?
+          "Ciphered text: #{encoded}"
+        end%>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
